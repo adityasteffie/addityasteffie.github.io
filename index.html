@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Aditya & Steffie</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <!-- <audio autoplay loop>
+    <source src="lagu.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio> -->
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="logo">
+          <!-- <span class="icon fa-gem"></span> -->
+          <img src="images/logo.png" class="logo" alt="Your Logo" />
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h4>THE WEDDING OF</h4>
+            <h1 style="font-family: 'GreatVibes', sans-serif">
+              Aditya & Steffie
+            </h1>
+            <p>Dear : <span id="kepada"></span></p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#intro">Bride & Groom</a></li>
+            <li><a href="#work">Greetings</a></li>
+            <li><a href="#about">Maps</a></li>
+            <li><a href="#contact">Gift</a></li>
+            <!--<li><a href="#elements">Elements</a></li>-->
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+        <audio id="backgroundMusic" autoplay loop style="display: none">
+          <source src="assets/music/music.mp3" type="audio/mp3" />
+          Your browser does not support the audio tag.
+        </audio>
+        <!-- Intro -->
+        <article id="intro" style="text-align: center">
+          <h2 class="major" style="color: #42567b; text-transform: uppercase">
+            Bride & Groom
+          </h2>
+          <!-- <span class="image main"><img src="images/pic01.jpg" alt="" /></span> -->
+          <div class="content">
+            <div class="inner">
+              <br /><br />
+
+              <h6 style="color: #42567b; text-transform: uppercase">
+                Let this be our destiny to love, to live, to begin each new day
+                together, to share our lives together
+              </h6>
+              <br />
+              <h1 style="color: #42567b; font-family: 'GreatVibes', sans-serif">
+                Aditya
+              </h1>
+              <h6 style="color: #42567b; text-transform: uppercase">
+                (Beloved son of Mr. Syawal Andar P. Sirait & Mrs. Tiomas Purba)
+              </h6>
+              <h1 style="color: #42567b; font-family: 'GreatVibes', sans-serif">
+                &
+              </h1>
+              <h1 style="color: #42567b; font-family: 'GreatVibes', sans-serif">
+                Steffie
+              </h1>
+              <h6 style="color: #42567b; text-transform: uppercase">
+                (Beloved daughter of Mr. Freddy Wijaya & Mrs. Jennifer Wijaya)
+              </h6>
+              <br /><br />
+              <h6 style="color: #42567b; text-transform: uppercase">
+                is an honor and joy for us if Mr/Mrs/Brother/ Sister was pleased
+                to attend to give a prayer of blessing to both families. Many
+                thanks.
+              </h6>
+              <br /><br /><br /><br /><br />
+              <br /><br /><br />
+            </div>
+          </div>
+        </article>
+
+        <!-- Work -->
+        <article id="work" style="text-align: center">
+          <h2 class="major" style="color: #42567b; text-transform: uppercase">
+            Greetings
+          </h2>
+          <br />
+          <form method="post" action="#" id="greetingsForm">
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Please Enter Name" />
+              </div>
+              <div class="field half">
+                <label for="presence">Presence</label>
+                <select name="presence" id="presence">
+                  <option value="">Select Presence</option>
+                  <option value="">Present</option>
+                  <option value="">Not Present</option>
+                  <option value="">Unable To Attend</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Greetings</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  placeholder="Please Enter Greetings"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input type="submit" value="Send Greetings" class="primary" />
+              </li>
+              <li><input type="reset" value="Reset" /></li>
+            </ul>
+          </form>
+
+          <div id="dataDisplay"></div>
+        </article>
+
+        <!-- About -->
+        <article id="about">
+          <h2
+            class="major"
+            style="
+              color: #42567b;
+              text-align: center;
+              text-transform: uppercase;
+            ">
+            Maps
+          </h2>
+          <!-- <span class="image main"><img src="images/pic03.jpg" alt="" /></span> -->
+          <br />
+          <h3 style="color: #42567b; text-transform: uppercase">
+            Foek lam mall kelapa gading 5 North Jakarta
+          </h3>
+          <div
+            style="
+              text-decoration: none;
+              overflow: hidden;
+              max-width: 100%;
+              width: 500px;
+              height: 500px;
+            ">
+            <div
+              id="g-mapdisplay"
+              style="height: 100%; width: 100%; max-width: 100%">
+              <iframe
+                style="height: 100%; width: 100%; border: 0"
+                frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=Foek+Lam+Mall+Kelapa+Gading+3,+RT.13/RW.18,+East+Kelapa+Gading,+North+Jakarta+City,+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            </div>
+
+            <style>
+              #g-mapdisplay img {
+                max-height: none;
+                max-width: none !important;
+                background: none !important;
+              }
+            </style>
+          </div>
+          <br /><br /><br /><br /><br /><br /><br />
+        </article>
+
+        <!-- Contact -->
+        <article id="contact" style="text-align: center">
+          <h2 class="major" style="color: #42567b; text-transform: uppercase">
+            Gift
+          </h2>
+          <div class="content">
+            <div class="inner">
+              <br />
+              <h5 style="color: #42567b; text-transform: uppercase">
+                Thank you for adding to the excitement of our wedding with your
+                presence and beautiful gifts.
+              </h5>
+              <hr />
+              <!-- <h1 style="color: #42567b">BCA</h1> -->
+              <div class="logo">
+                <!-- <span class="icon fa-gem"></span> -->
+                <img
+                  src="images/bca.png"
+                  class="logo"
+                  style="width: 100px"
+                  alt="Your Logo" />
+              </div>
+              <h4 style="color: #42567b">7530234309</h4>
+              <h5 style="color: #42567b; text-transform: uppercase">
+                Aditya Radotti
+              </h5>
+              <hr />
+              <div class="logo">
+                <!-- <span class="icon fa-gem"></span> -->
+                <img
+                  src="images/bca.png"
+                  class="logo"
+                  style="width: 100px"
+                  alt="Your Logo" />
+              </div>
+              <!-- <h1 style="color: #42567b">BCA</h1> -->
+              <h4 style="color: #42567b">5270346865</h4>
+              <h5 style="color: #42567b; text-transform: uppercase">Steffie</h5>
+              <hr />
+
+              <br /><br /><br /><br /><br />
+              <br /><br /><br />
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright">&copy; Aditya & Steffie All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+    <script>
+      // Ambil nilai dari parameter 'to' dalam URL
+      var urlParams = new URLSearchParams(window.location.search);
+      var toValue = urlParams.get("to");
+
+      // Ambil elemen span dengan id "kepada"
+      var spanElement = document.getElementById("kepada");
+
+      // Set teks dalam elemen span dengan nilai parameter 'to' dari URL
+      spanElement.textContent = toValue;
+    </script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
