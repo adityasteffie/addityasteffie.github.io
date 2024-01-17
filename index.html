@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
   <head>
     <title>Aditya & Steffie</title>
@@ -17,17 +12,15 @@
     /></noscript>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
-
+  <!-- <audio autoplay loop>
+    <source src="lagu.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio> -->
   <body class="is-preload">
-	
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
       <header id="header">
-	          <audio id="backgroundMusic" autoplay loop style="display: none">
-          <source src="assets/music/music.mp3" type="audio/mp3" />
-          Your browser does not support the audio tag.
-        </audio>
         <div class="logo">
           <!-- <span class="icon fa-gem"></span> -->
           <img src="images/logo.png" class="logo" alt="Your Logo" />
@@ -54,7 +47,10 @@
 
       <!-- Main -->
       <div id="main">
-      
+        <audio id="backgroundMusic" autoplay loop style="display: none">
+          <source src="assets/music/music.mp3" type="audio/mp3" />
+          Your browser does not support the audio tag.
+        </audio>
         <!-- Intro -->
         <article id="intro" style="text-align: center">
           <h2 class="major" style="color: #42567b; text-transform: uppercase">
@@ -258,5 +254,19 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      var backgroundMusic = document.getElementById("backgroundMusic");
+
+      // Pause the music
+      function pauseMusic() {
+        backgroundMusic.pause();
+      }
+
+      // Change volume (0.0 to 1.0)
+      function setVolume(volume) {
+        backgroundMusic.volume = volume;
+      }
+    </script>
   </body>
 </html>
