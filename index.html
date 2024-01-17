@@ -17,11 +17,12 @@
     /></noscript>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
-  <!-- <audio autoplay loop>
-    <source src="lagu.mp3" type="audio/mp3" />
-    Your browser does not support the audio element.
-  </audio> -->
+
   <body class="is-preload">
+	    <audio id="backgroundMusic" autoplay loop style="display: none">
+          <source src="assets/music/music.mp3" type="audio/mp3" />
+          Your browser does not support the audio tag.
+        </audio>
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
@@ -52,10 +53,7 @@
 
       <!-- Main -->
       <div id="main">
-        <audio id="backgroundMusic" autoplay loop style="display: none">
-          <source src="assets/music/music.mp3" type="audio/mp3" />
-          Your browser does not support the audio tag.
-        </audio>
+      
         <!-- Intro -->
         <article id="intro" style="text-align: center">
           <h2 class="major" style="color: #42567b; text-transform: uppercase">
