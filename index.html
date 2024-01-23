@@ -11,10 +11,13 @@
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
   </head>
   <body class="is-preload">
     <button id="playButton">Play Music</button>
-    <audio id="backgroundMusic" autoplay loop style="visibility: hidden">
+    <audio id="backgroundMusic" autoplay loop>
       <source src="assets/music/music.mp3" type="audio/mp3" />
       Your browser does not support the audio tag.
     </audio>
@@ -276,15 +279,18 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script type="module">
       $(document).ready(function () {
         loadData();
+        playBackgroundMusic();
+
         function playBackgroundMusic() {
-          var backgroundMusic = document.getElementById("backgroundMusic");
+          // Use the singleton function to get the audio element
+          var backgroundMusic = singleton();
           if (backgroundMusic) {
             backgroundMusic.play().catch(function (error) {
-              // Handle the error, e.g., log it or show a message to the user
               console.error("Autoplay failed:", error);
             });
           }
@@ -340,8 +346,14 @@
           .then(() => {
             InputName.value = "";
             inputMessage.value = "";
+            // alert("Data added successfully");
+            Swal.fire({
+              icon: "success",
+              text: "Data added successfully",
+              showConfirmButton: false,
+              timer: 1500, // Automatically close after 1.5 seconds
+            });
             loadData();
-            alert("Data added successfully");
           })
           .catch((error) => {
             alert(error);
@@ -370,6 +382,7 @@
           });
       }
       function displayAllData(datas) {
+        $("#dataDisplay").empty();
         // Assuming datas is an object
         Object.entries(datas).forEach(function ([key, data]) {
           // Access properties like "Message" and "Name" from each data object
@@ -386,8 +399,9 @@
             "</p>" +
             "</div>";
           // Your code to display the data, for example, appending it to a container
-          debugger;
+          // debugger;
           // dataDisplay.append(html);
+
           $("#dataDisplay").append(html);
         });
       }
@@ -419,6 +433,26 @@
       // findBtn.addEventListener("click", FindData);
       // updateBtn.addEventListener("click", UpdateData);
       // removeBtn.addEventListener("click", RemoveData);
+
+      const singleton = () => {
+        let audio;
+
+        if (!audio) {
+          audio = new Audio();
+          // Specify the data-url attribute for the audio element
+          audio.src = document
+            .getElementById("backgroundMusic")
+            .getAttribute("data-url");
+          audio.load();
+          audio.currentTime = 0;
+          audio.autoplay = true;
+          audio.muted = false;
+          audio.loop = true;
+          audio.volume = 1;
+        }
+
+        return audio;
+      };
     </script>
   </body>
 </html>
