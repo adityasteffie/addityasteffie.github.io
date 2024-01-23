@@ -5,19 +5,18 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+      content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
-  <!-- <audio autoplay loop>
-    <source src="lagu.mp3" type="audio/mp3" />
-    Your browser does not support the audio element.
-  </audio> -->
   <body class="is-preload">
+    <audio id="backgroundMusic" autoplay loop style="display: none">
+      <source src="assets/music/music.mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
@@ -48,10 +47,6 @@
 
       <!-- Main -->
       <div id="main">
-        <audio id="backgroundMusic" autoplay loop style="display: none">
-          <source src="assets/music/music.mp3" type="audio/mp3" />
-          Your browser does not support the audio tag.
-        </audio>
         <!-- Intro -->
         <article id="intro" style="text-align: center">
           <h2 class="major" style="color: #42567b; text-transform: uppercase">
@@ -108,8 +103,7 @@
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Please Enter Name"
-                />
+                  placeholder="Please Enter Name" />
               </div>
               <!-- <div class="field half">
                 <label for="presence">Presence</label>
@@ -126,8 +120,7 @@
                   name="message"
                   id="message"
                   rows="4"
-                  placeholder="Please Enter Greetings"
-                ></textarea>
+                  placeholder="Please Enter Greetings"></textarea>
               </div>
             </div>
             <ul class="actions">
@@ -140,8 +133,9 @@
             </ul>
           </form>
 
-          <h3>Greeting List</h3>
-          <div id="dataDisplay" style="text-align:left"></div>
+          <h3>GREETINGS LIST</h3>
+          <hr />
+          <div id="dataDisplay" style="text-align: left"></div>
           <!-- <hr />
           <div class="card">
             <h2>Name</h2>
@@ -152,6 +146,7 @@
             <h2>Name</h2>
             <p>Greetings</p>
           </div> -->
+          <hr />
         </article>
 
         <!-- About -->
@@ -162,8 +157,7 @@
               color: #42567b;
               text-align: center;
               text-transform: uppercase;
-            "
-          >
+            ">
             Maps
           </h2>
           <!-- <span class="image main"><img src="images/pic03.jpg" alt="" /></span> -->
@@ -178,17 +172,14 @@
               max-width: 100%;
               width: 500px;
               height: 500px;
-            "
-          >
+            ">
             <div
               id="g-mapdisplay"
-              style="height: 100%; width: 100%; max-width: 100%"
-            >
+              style="height: 100%; width: 100%; max-width: 100%">
               <iframe
                 style="height: 100%; width: 100%; border: 0"
                 frameborder="0"
-                src="https://www.google.com/maps/embed/v1/place?q=Foek+Lam+Mall+Kelapa+Gading+3,+RT.13/RW.18,+East+Kelapa+Gading,+North+Jakarta+City,+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-              ></iframe>
+                src="https://www.google.com/maps/embed/v1/place?q=Foek+Lam+Mall+Kelapa+Gading+3,+RT.13/RW.18,+East+Kelapa+Gading,+North+Jakarta+City,+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
             </div>
 
             <style>
@@ -222,8 +213,7 @@
                   src="images/bca.png"
                   class="logo"
                   style="width: 100px"
-                  alt="Your Logo"
-                />
+                  alt="Your Logo" />
               </div>
               <h4 style="color: #42567b">7530234309</h4>
               <h5 style="color: #42567b; text-transform: uppercase">
@@ -236,8 +226,7 @@
                   src="images/bca.png"
                   class="logo"
                   style="width: 100px"
-                  alt="Your Logo"
-                />
+                  alt="Your Logo" />
               </div>
               <!-- <h1 style="color: #42567b">BCA</h1> -->
               <h4 style="color: #42567b">5270346865</h4>
@@ -380,7 +369,7 @@
           const html =
             // "<hr/>" +
             '<div class="card" style="text-align:left">' +
-            "<h5>" +
+            "<h5 style='text-transform: uppercase'>" +
             name +
             "</h5>" +
             "<p style=:'font-size:x-small'>" +
