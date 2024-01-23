@@ -141,7 +141,7 @@
           </form>
 
           <h1>Greeting List</h1>
-          <div id="dataDisplay"></div>
+          <div id="dataDisplay" style="text-align:left"></div>
           <!-- <hr />
           <div class="card">
             <h2>Name</h2>
@@ -379,13 +379,13 @@
           const name = data.Name;
           const html =
             "<hr/>" +
-            '<div class="card">' +
-            "<h2>" +
+            '<div class="card" style="text-align:left">' +
+            "<h5>" +
             name +
-            "</h2>" +
-            "<h2>" +
+            "</h5>" +
+            "<p style=:'font-size:x-small'>" +
             message +
-            "</h2>" +
+            "</p>" +
             "</div>";
           // Your code to display the data, for example, appending it to a container
           debugger;
