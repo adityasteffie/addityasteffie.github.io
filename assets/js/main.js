@@ -27,23 +27,8 @@
   $(window).on("load", function () {
     window.setTimeout(function () {
       $body.removeClass("is-preload");
-      initUserInteraction();
     }, 100);
   });
-
-  function initUserInteraction() {
-    // Attach a click event to an element (e.g., a button) to initiate playback
-    $("#playButton").on("click", function () {
-      playBackgroundMusic();
-    });
-  }
-
-  function playBackgroundMusic() {
-    var backgroundMusic = document.getElementById("backgroundMusic");
-    if (backgroundMusic) {
-      backgroundMusic.play();
-    }
-  }
 
   // Fix: Flexbox min-height bug on IE.
   if (browser.name == "ie") {
