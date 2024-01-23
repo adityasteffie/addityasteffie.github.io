@@ -13,7 +13,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
   <body class="is-preload">
-    <audio id="backgroundMusic" autoplay loop style="display: none">
+    <button id="playButton">Play Music</button>
+    <audio id="backgroundMusic" autoplay loop style="visibility: hidden">
       <source src="assets/music/music.mp3" type="audio/mp3" />
       Your browser does not support the audio tag.
     </audio>
@@ -125,11 +126,21 @@
             </div>
             <ul class="actions">
               <li>
-                <a id="send" value="Send Greetings" class="btn btn-primary">
+                <a
+                  id="send"
+                  value="Send Greetings"
+                  class="btn btn-primary"
+                  style="color: green">
                   SEND GREETINGS
                 </a>
               </li>
-              <li><input type="reset" value="Reset" onclick="reset()" /></li>
+              <li>
+                <input
+                  type="reset"
+                  value="Reset"
+                  style="color: red"
+                  onclick="reset()" />
+              </li>
             </ul>
           </form>
 
@@ -269,16 +280,14 @@
     <script type="module">
       $(document).ready(function () {
         loadData();
-        var backgroundMusic = document.getElementById("backgroundMusic");
-
-        // Pause the music
-        function pauseMusic() {
-          backgroundMusic.pause();
-        }
-
-        // Change volume (0.0 to 1.0)
-        function setVolume(volume) {
-          backgroundMusic.volume = volume;
+        function playBackgroundMusic() {
+          var backgroundMusic = document.getElementById("backgroundMusic");
+          if (backgroundMusic) {
+            backgroundMusic.play().catch(function (error) {
+              // Handle the error, e.g., log it or show a message to the user
+              console.error("Autoplay failed:", error);
+            });
+          }
         }
       });
 
@@ -353,7 +362,7 @@
               // Process the retrieved data, for example, display it in the HTML
               displayAllData(data);
             } else {
-              alert("No data found");
+              console.log("No data found");
             }
           })
           .catch((error) => {
